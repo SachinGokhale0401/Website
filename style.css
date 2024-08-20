@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Lucida Console", "Courier New", monospace; the second font is a backup font if first font not available */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    color: #fff;
+    background-color: black;
+    background-image: url('black\ background.jpg');
+    background-size:contain;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+
+/* ---------- Nav Bar ---------- */
+
+
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.719);
+    display: flex; /*allows for the items in this container to be arranged*/
+    align-items: center; /*alligns items along the cross axis*/
+    justify-content: flex-end; /*moves items in container to the end*/
+    flex-wrap: wrap; /*items are too long will move onto the next line*/
+    padding-right: 50px;
+    position: fixed;
+    height: 50px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+
+nav ul li { /*bringing links to the top and horizonal*/
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px; /*first# is vert dist, sec# is horiz dist b/w links*/
+}
+
+
+nav ul li a{ /*styling for the header links*/
+    color: #fff;
+    text-decoration: none; /* removes underline */
+    font-size: 18px;
+    position: relative;
+}
+
+
+nav ul li a::after { /*adding hover effects for links*/
+    content: '';
+    width: 0; /*hover line initially hidden*/
+    height: 3px;
+    background: #bcc7f7;
+    position:absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.25s;
+}
+
+
+nav ul li a:hover::after{
+    width: 100%
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    padding-bottom: 350px;
+}
+.header-text h1 {
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #bcc7f7;
+}
+.header-text h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* -----------------About---------------- */
+.container { /*padding is used to move the links created in the html file*/
+    padding: 50px 7%; /*the first part is only vertical, second part is horizontal movement */
+}
+
+
+#about {
+    /* padding: 350px 0; */
+    padding-bottom: 376px;
+    color: #ffffff;
+}
+/**/
+.about-image {  /*changes image format*/
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-2{
+    flex-basis: 60%; /*second column start position*/
+    line-height: 1.5;
+    background-color: #262626d5;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+.sub-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    font-weight: 500;  /*makes font more bold*/
+    color: #fff;
+}
+/**/
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer; /*changes cursor to pointer*/
+    position: relative;
+}
+
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #bcc7f7;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+
+.tab-contents ul li { /*the sub-information*/
+    list-style: none;
+    line-height: 1.25;
+    margin: 15px 0; /*dist between each bullet point*/
+    font-size: 15px;
+}
+.tab-contents ul li span { /*the header-information*/
+    color:#bcc7f7;
+    font-size: 20px;
+    font-weight: 500;
+}
+.tab-contents {
+    display: none; /*hides content in the tab*/
+}
+.tab-contents.active-tab {
+    display: block; /*It takes up the full width available, starts on a new line,
+                    and can have width, height, margin, and padding.*/
+}
+
+
+/* ----------Skills---------- */
+#skills {
+    margin-top: -350px;
+    padding: 30px 0;
+}
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 75px;
+    margin-top: 50px;
+   
+}
+.skills-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.skills-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.skills-list div a {
+    text-decoration:none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.skills-list div:hover {
+    background: #687080;
+    transform: translateY(-10px);
+}
+
+
+.skills-list div i {
+    color: #bcc7f7;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+/* ----------Portfolio----------
+#portfolio {
+    padding: 50px 0;
+} */
+
+
+
+
+/* ----------Contact ---------- */
+.contact-left {
+    flex-basis: 35%;
+    font-size: 20px;
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-left p {
+    margin-top: 30px;
+}
+.contact-left p i {
+    color: #bcc7f7;
+    margin-right: 15px;
+    font-size: 30px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    /* font-size: 30px; */
+    margin-right: 15px;
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a i {
+    font-size: 30px;
+    color: #bcc7f7;
+    margin-right: 10px;
+}
+.social-icons a:hover {
+    color: #a4add4;
+    transform: translateY(-5px);
+}
+.button {
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #bcc7f7;
+    background-color: #262626;
+    padding: 20px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+    transition: 0.25s;
+   
+}
+.button:hover {
+    background-color: #bcc7f7;
+    transform: translateY(-5px);
+}
+
+
+form .button.btn2:hover {
+    transform: none;
+    background-color: #bcc7f7;
+    transition: none;
+    padding: 14px 60px;
+}
+
+
+.contact-right form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+
+
+#message {
+    color: #bdc7f5;
+    margin-top: -40px;
+    display: block;
+}
+
+
+
+
+/* ----------CSS for small Screen---------- */
+nav .fa-solid {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background:#bcc7f7;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2 {
+      flex-basis: 100%;
+      margin-right: 20px;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+}
+

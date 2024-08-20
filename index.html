@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name= "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Sachin Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6ef6a4480b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <nav> <!--used to indicate naviagtion links-->
+        <ul id="sidemenu"> <!--ul is unordered list-->
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class = "container">
+        <div class = "header-text">
+            <h1>Sachin Gokhale</h1>
+            <h3>Passionate Student Studying Mechanical Engineering</h3>
+        </div>
+    </div>
+</div>
+
+
+<!-- -----------------About---------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="WPLK9618.JPEG" class="about-image">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>Hello, my name is Sachin Gokhale and I am a student studying
+                    Mechanical Engineering at the University of Illinois Ubrana Champaign. 
+                    I am passionate about space, robotics, and medtech. Outside of school you can find me at rock climbing,
+                    lifting weights at the gym, hiking, or hanging out with friends and family.</p>
+                
+                <div class="tab-titles"> 
+                    <!-- function open tab is defined below -->
+                    <p class="tab-links active-link"onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Extracurriculars')">Extracurriculars</p>
+                </div>
+                <div class="tab-contents"id="Extracurriculars">
+                    <ul>
+                        <li><span>Illinois Consulting Group</span><br> Conducted research into various marketing methods to formulate a marketing plan best suited for my client's best interests. 
+                            Presented findings in a clear and concise presentation tailored to my clients goals.</li>
+                        <li><span>American Society of Mechanical Engineers</span><br> Designed and successfully prototyped a tank steering system for a robot using Autodesk Fusion 360, resulting in increased
+                            maneuverability and stability.</li>
+                        <li><span>Illinois Space Society</span><br> Collaborated on the ideation and prototyping of a mechanical tool capable of functioning in a zero-atmosphere environment.
+                            Gained hands-on experience in the design and fabrication of the tool, enhancing skills in 3D design.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Alcon Laboratories</span><br>January 2024 - July 2024<br> Skills Developed: CAD, Data Analysis, Statistics, Project Managment</li>
+                        <li><span>UIUC Undergraduate Research Assistant</span><br> January 2023 - August 2023<br> Skills Developed: Manufacturing, CAD, Communication, Time Managment</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>University of Illinois Urbana Champaign</span><br>2022-2026
+                            <br>B.S in Mechanical Engineering <br> Minor in Statistics</li>
+                        <li><span>North Brunswick Township High School</span><br> 2018-2022</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------Skills---------- -->
+<div id="skills">
+    <div class="container">
+        <h1 class = "sub-title">Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-solid fa-cubes"></i>
+                <h2 style="color: #fff;">Computer Aided Design</h2>
+                <p>
+                     SolidWorks, Creo Parametric, Fusion 360</p>
+                <!-- <a href="#">link text</a> -->
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2 style="color: #fff;">Programming</h2>
+                <p>Java, CSS, Html, Python, C++</p>
+                <!-- <a href="#">link text</a> -->
+            </div>
+            <div>
+                <i class="fa-regular fa-handshake"></i>
+                <h2 style="color: #fff;">Soft Skills</h2>
+                <p>Leadership, Communication, Problem Solving, Adaptability</p>
+                <!-- <a href="#">link text</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------Portfolio----------
+ <div id="portfolio">
+    <div class="container">
+        <h1 class = "sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                
+            </div>
+        </div>
+
+    </div>
+ </div> -->
+
+
+
+<!-- ---------- Contact ---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = sub-title>Contact</h1>
+                <p><i class="fa-solid fa-envelope"></i>SG77@illinois.edu</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sachin-gokhale" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> Linked In</a>
+                </div>
+                <a href="Sachin Gokhale 2024 Resume.pdf" target="_blank" class="button"><i class="fa-solid fa-download"></i> Download Resume</a>
+            </div>
+            <!-- <a href="" class="button"><i class="fa-solid fa-download"></i> Download Resume</a> -->
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="Text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="button btn2">Submit</button>
+                </form>
+                <span id="message"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        // the goal of the function is to hide the other info in abt me and show the ones on click
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwKluCCr_PMQH8j-PuAjXxwrno4LlXApmP9h-1caj7cTlpBsdsYBHlX-CKr8x6GgzRxYg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const message = document.getElementById("message")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            message.innerHTML = "Message Sent Successfully!"
+            setTimeout(function(){
+                message.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
